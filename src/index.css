@@ -13,6 +13,32 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  .sidebar {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  .main {
+    background-color: #f0f0f0;
+  }
+  .card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -30,8 +56,6 @@
 }
 .sidebar {
   width: 22rem;
-  background-color: #f9f9f9;
-  color: #213547;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,8 +69,7 @@
 .main {
   flex: 1;
   padding: 20px;
-  background-color: #f0f0f0;
-  display: flex; /* Add flex display to arrange candidates horizontally */
+  display: flex;
 }
 
 .candidate-list {
@@ -59,7 +82,6 @@
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
   cursor: pointer;
@@ -80,18 +102,6 @@
   flex: 1;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 button {
   background-color: #a60f25;
   color: #fff;
@@ -108,7 +118,7 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #ccc; /* Color de fondo en gris para botones deshabilitados */
-  color: #555; /* Color de texto en gris para botones deshabilitados */
-  cursor: not-allowed; /* Cambiar el cursor a "no permitido" para botones deshabilitados */
+  background-color: #ccc;
+  color: #555;
+  cursor: not-allowed;
 }
