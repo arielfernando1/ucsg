@@ -13,7 +13,7 @@ export default function Root() {
     async function fetchCandidates() {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/candidates"
+          "http://132.145.173.211:5000/api/candidates"
         );
         setCandidates(response.data);
       } catch (error) {

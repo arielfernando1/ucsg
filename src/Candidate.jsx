@@ -9,7 +9,7 @@ export default function Candidate(props) {
     async function fetchVotes() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/candidates/${id}/votes`
+          `http://132.145.173.211:5000/api/candidates/${id}/votes`
         );
         console.log(response.data.votes);
         setVotes(response.data.votes);
