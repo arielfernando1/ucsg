@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../LogoutButton";
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Candidate from "../Candidate";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -34,6 +34,9 @@ export default function Root() {
               <h3>{user.nickname}</h3>
               <p>{user.email}</p>
               <LogoutButton />
+              {/* <Link to="/results">
+                <button>Resultados</button>
+              </Link> */}
             </>
           )}
         </div>

@@ -7,6 +7,8 @@ import Root from "./routes/root.jsx";
 import LoginButton from "./LoginButton";
 import ErrorPage from "./error-page";
 import Details from "./Details";
+import Results from "./Results";
+import Home from "./Home";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,12 @@ const router = createBrowserRouter([
   {
     path: "/details/:id",
     element: <Details />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/results",
+    element: <Results />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
@@ -33,11 +41,7 @@ const App = () => {
     return <div>Loading...</div>;
   }
 
-  return (
-    <>
-      {isAuthenticated ? <RouterProvider router={router} /> : <LoginButton />}
-    </>
-  );
+  return <>{isAuthenticated ? <RouterProvider router={router} /> : <Home />}</>;
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(
