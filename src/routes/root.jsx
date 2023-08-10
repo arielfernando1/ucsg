@@ -33,10 +33,10 @@ export default function Root() {
               <h2>{user.name}</h2>
               <h3>{user.nickname}</h3>
               <p>{user.email}</p>
+              <Link to="/results">
+                <button>Votar</button>
+              </Link>
               <LogoutButton />
-              {/* <Link to="/results">
-                <button>Resultados</button>
-              </Link> */}
             </>
           )}
         </div>
