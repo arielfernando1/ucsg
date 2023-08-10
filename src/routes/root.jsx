@@ -29,9 +29,8 @@ export default function Root() {
           <h1>UCSG</h1>
           {isAuthenticated && (
             <>
-              <img src={user.picture} alt={user.name} />
+              <img src={user.picture} alt={user.name} className="avatar" />
               <h2>{user.name}</h2>
-              <h3>{user.nickname}</h3>
               <p>{user.email}</p>
               <Link to="/results">
                 <button>Votar</button>
