@@ -4,11 +4,12 @@ import "./index.css";
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root.jsx";
-import LoginButton from "./LoginButton";
 import ErrorPage from "./error-page";
 import Details from "./Details";
 import Results from "./Results";
 import Home from "./Home";
+import Vote from "./Vote";
+import NewsPage from "./News";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/main",
-        element: <h1>Main</h1>,
+        path: "/vote",
+        element: <Vote />,
+      },
+      {
+        path: "/news",
+        element: <NewsPage />,
       },
     ],
   },

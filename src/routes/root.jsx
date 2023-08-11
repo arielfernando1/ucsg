@@ -1,27 +1,14 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../LogoutButton";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Candidate from "../Candidate";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import NewsPage from "../News";
 
 export default function Root() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const [candidates, setCandidates] = useState([]);
 
-  useEffect(() => {
-    async function fetchCandidates() {
-      try {
-        const response = await axios.get(
-          "http://132.145.173.211:5000/api/candidates"
-        );
-        setCandidates(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchCandidates();
-  }, []);
   return (
     <>
       <div className="container">
@@ -30,32 +17,19 @@ export default function Root() {
           {isAuthenticated && (
             <>
               <img src={user.picture} alt={user.name} className="avatar" />
-              <h2>{user.name}</h2>
               <p>{user.email}</p>
-              <Link to="/results">
+              <Link to="/vote">
                 <button>Votar</button>
+              </Link>
+              <Link to="/news">
+                <button>Noticias</button>
               </Link>
               <LogoutButton />
             </>
           )}
         </div>
         <div id="main">
-          <div className="candidate-list">
-            {isLoading ? (
-              <h1>Loading...</h1>
-            ) : (
-              candidates?.map((candidate) => (
-                <Candidate
-                  key={candidate.id}
-                  id={candidate.id}
-                  name={candidate.name}
-                  photoUrl={candidate.photoUrl}
-                  list={candidate.list}
-                  proposals={candidate.proposals}
-                />
-              ))
-            )}
-          </div>
+          <Outlet />
         </div>
       </div>
     </>
