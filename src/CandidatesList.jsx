@@ -12,7 +12,7 @@ export default function CandidatesList() {
     async function fetchCandidates() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/candidates/${param}`
+          `http://132.145.173.211:5000/api/candidates/${param}`
         );
         setCandidates(response.data);
       } catch (error) {

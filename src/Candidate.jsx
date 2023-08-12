@@ -16,13 +16,13 @@ export default function Candidate(props) {
     async function fetchVotesAndCheckVoteStatus() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/candidates/${id}/votes`
+          `http://132.145.173.211:5000/api/candidates/${id}/votes`
         );
         setVotes(response.data.votes);
 
         // Check if the user has voted using the /api/:id/hasvoted endpoint
         const hasVotedResponse = await axios.get(
-          `http://localhost:5000/api/${user.email}/hasvoted/${party_id}`
+          `http://132.145.173.211:5000/api/${user.email}/hasvoted/${party_id}`
         );
 
         if (hasVotedResponse.status === 200) {
@@ -42,7 +42,7 @@ export default function Candidate(props) {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/candidates/${id}/vote`,
+        `http://132.145.173.211:5000/api/candidates/${id}/vote`,
         {
           votantId: user.email,
         }
