@@ -14,7 +14,7 @@ export default function Vote() {
             <h1>Consejo Universitario</h1>
           </div>
           <div className="card-body">
-            <img src="src/assets/01.png" alt="c1" />
+            <img src="01.png" alt="c1" />
           </div>
           <Link to={`/foo/1`}>
             <button>
@@ -29,7 +29,7 @@ export default function Vote() {
             <h1>Consejo Directivo</h1>
           </div>
           <div className="card-body">
-            <img src="src/assets/02.png" alt="c2" />
+            <img src="02.png" alt="c2" />
           </div>
           <Link to={`/foo/2`}>
             <button>
