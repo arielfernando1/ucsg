@@ -10,6 +10,7 @@ import Results from "./Results";
 import Home from "./Home";
 import Vote from "./Vote";
 import NewsPage from "./News";
+import CandidatesList from "./CandidatesList";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
         path: "/news",
         element: <NewsPage />,
       },
+      {
+        path: "/foo/:param",
+        element: <CandidatesList />,
+      },
+      {
+        path: "/",
+        element: <NewsPage />,
+      }
     ],
   },
   {

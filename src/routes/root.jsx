@@ -1,13 +1,11 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../LogoutButton";
 import { Link, Outlet } from "react-router-dom";
-import Candidate from "../Candidate";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import NewsPage from "../News";
+import { BiNews } from "react-icons/bi";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function Root() {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -19,10 +17,14 @@ export default function Root() {
               <img src={user.picture} alt={user.name} className="avatar" />
               <p>{user.email}</p>
               <Link to="/vote">
-                <button>Votar</button>
+                <button>
+                  <AiFillCheckCircle /> Votar
+                </button>
               </Link>
               <Link to="/news">
-                <button>Noticias</button>
+                <button>
+                  <BiNews /> Noticias
+                </button>
               </Link>
               <LogoutButton />
             </>

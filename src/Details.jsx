@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -17,7 +17,7 @@ export default function Details() {
       setIsVoting(true);
       try {
         const response = await axios.post(
-          `http://132.145.173.211:5000/api/candidates/${id}/vote`,
+          `http://localhost:5000/api/candidates/${id}/vote`,
           {
             votantId: user.email,
           }
@@ -41,7 +41,7 @@ export default function Details() {
     async function fetchCandidate() {
       try {
         const response = await axios.get(
-          `http://132.145.173.211:5000/api/candidates/${id}`
+          `http://localhost:5000/api/candidates/${id}`
         );
         setCandidate(response.data);
         setIsLoading(false);

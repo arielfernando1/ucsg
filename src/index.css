@@ -37,6 +37,9 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .container {
@@ -50,9 +53,17 @@
   align-items: center;
   justify-content: center;
 }
-.centered img {
-  width: 50%;
-  height: 50%;
+.centered img{
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.centered h1{
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: center;
 }
 .sidebar {
   width: 22rem;
@@ -86,7 +97,8 @@
   transition: box-shadow 0.3s;
   cursor: pointer;
   text-align: center;
-  min-width: 25vh;
+  min-width: 32vh;
+  max-width: 32vh;
   user-select: none;
 }
 
@@ -101,7 +113,7 @@
   margin: 10px 0;
 }
 
-.card h1{
+.card h1 {
   font-size: 1.5rem;
   margin: 0;
 }
@@ -135,8 +147,51 @@ button:disabled {
   cursor: not-allowed;
 }
 
-h1{
+h1 {
   font-size: 2rem;
   margin: 2rem;
 }
+.news-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+}
 
+/* Style for the news image */
+.news-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Style for the news title */
+.news-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Style for the news description */
+.news-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Style for the "Leer más" button */
+.news-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.news-card button:hover {
+  background-color: #0056b3;
+}
