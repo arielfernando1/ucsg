@@ -16,6 +16,7 @@ export default function Root() {
             <>
               <img src={user.picture} alt={user.name} className="avatar" />
               <p>{user.email}</p>
+              <h2>Facultad de Ingeniería</h2>
               <Link to="/vote">
                 <button>
                   <AiFillCheckCircle /> Votar

@@ -8,7 +8,7 @@ export default function Vote() {
       <h1>
         <GiVote /> Elige un Consejo
       </h1>
-      <div className="main">
+      <div className="candidate-list">
         <div className="card">
           <div className="card-header">
             <h1>Consejo Universitario</h1>
