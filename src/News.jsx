@@ -15,10 +15,11 @@ export default function NewsPage() {
       </div>
       <div>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
-          cupiditate repudiandae, saepe ipsa porro adipisci maxime, aspernatur,
-          blanditiis veniam ab quaerat illo id ad! Quo quas consequuntur
-          inventore veritatis quia.
+          Reglamento Convocatoria Calendario CANDIDATOS CALIFICADOS PADRONES POR
+          FACULTADESLISTADO PARA ELECCIÓN DE PROFESORES REPRESENTANTES ALTERNOS
+          (A) CONSEJO UNIVERSITARIO FACULTAD ARQUITECTURA Y DISEÑO FACULTAD
+          JURISPRUDENCIA FACULTAD ARTES Y HUMANIDADES FACULTAD FILOSOFIA
+          FACULTAD
         </p>
       </div>
       <button>Leer más</button>
